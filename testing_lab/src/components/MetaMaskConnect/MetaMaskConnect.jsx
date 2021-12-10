@@ -36,8 +36,6 @@ const MetaMaskConnect = (props) => {
           isClosable: true,
         })
       }
-    } else {
-      alert("Please install MetaMask");
     }
   }
 

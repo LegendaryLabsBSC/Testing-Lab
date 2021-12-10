@@ -38,7 +38,6 @@ interface ContractLab {
   matching: ContractInterface;
 }
 
-
 const smartContracts = [
   LegendsLaboratory,
   LegendsNFT,

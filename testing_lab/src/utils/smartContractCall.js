@@ -16,5 +16,5 @@ export default async function smartContractCall(
       .catch((err) => {
         return err
       })
-  }
+  } 
 }

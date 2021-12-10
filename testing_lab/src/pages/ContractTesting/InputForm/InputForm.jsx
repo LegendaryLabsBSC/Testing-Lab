@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import { smartContracts } from '../../../config/contractInterface';
-import FormElement from "./components/FormElement"
+import FormElement from "./components/FormElements/FormElement"
 import OutputConsole from './components/OutputConsole';
 import setColorScheme from '../../../utils/setColorScheme';
 import smartContractCall from '../../../utils/smartContractCall'
@@ -12,6 +12,7 @@ import {
   FormLabel,
   FormControl,
   FormErrorMessage,
+  Spacer,
 } from '@chakra-ui/react'
 
 const InputForm = (props) => {
@@ -109,8 +110,8 @@ const InputForm = (props) => {
                   {input.name}:
                 </FormLabel>
                 <FormElement
-                  input={input}
-                  key={input.name}
+                  name={input.name}
+                  type={input.type}
                   register={register}
                 />
                 <FormErrorMessage>
@@ -143,10 +144,8 @@ const InputForm = (props) => {
 
   return (
     <Flex
-      mr={5}
-      mt={5}
       h="90vh"
-      w={props.navSize === "small" ? "33vw" : "25vw"}
+      w={props.navSize === "small" ? "31vw" : "25vw"}
       background="white"
       borderRadius={30}
       flexDirection="column"
@@ -164,6 +163,7 @@ const InputForm = (props) => {
         contractData={smartContracts[props.contractIndex]}
       />
       <FormContext />
+      <Spacer />
       <OutputConsole
         name={name}
         navSize={props.navSize}

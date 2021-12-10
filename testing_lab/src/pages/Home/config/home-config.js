@@ -12,29 +12,27 @@ const homeConfig = {
     (props) => (
       <Heading
         p={1}
-        as='h3'
-        fontSize="2xl"
         w="100%"
+        as='h2'
+        fontSize="3xl"
+        fontFamily="Georgia"
         textAlign="center"
       >
         {props.title}
       </Heading>
     ),
   welcomePanel: {
-    title: "Welcome To The Testing Lab!",
     blurb: [
       <Text
-        mb={2}
+        mb={3}
       >
         Here you can <b>directly</b> <i>speak</i> to the project's smart contract bundle!
         Keyword being directly, the Testing Lab DApp parses the contract ABI outputted when
-        the smart contracts are compiled.This ensures when testing with this DApp,
-        the contract calls are executed exactly as written, without any additional safe
-        guards or gamification that will be put in place with the Official DApp.
+        the smart contracts are compiled.This ensures the contract calls are executed exactly as written,
+        without any additional safeguards or gamification that will be put in place with the Official DApp.
       </Text >,
       <Text
-        mb={2}
-
+        mb={3}
       >
         Keep this in mind while testing, as some functions on the Official DApp
         will have set parameters than can not be specified by the end user.
@@ -42,8 +40,7 @@ const homeConfig = {
         query the project's contract bundle.
       </Text>,
       <Text
-        mb={2}
-
+        mb={3}
       >
         Parsing directly from the contract ABIs also allows for painless updates of the
         contract testing interface. When new changes are merged into the Smart Contracts
