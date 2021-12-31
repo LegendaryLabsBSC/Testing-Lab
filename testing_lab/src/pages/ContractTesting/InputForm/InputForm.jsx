@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useForm } from 'react-hook-form'
+
 import { smartContracts } from '../../../config/contractInterface';
 import FormElement from "./components/FormElements/FormElement"
 import OutputConsole from './components/OutputConsole';
@@ -14,6 +15,11 @@ import {
   FormErrorMessage,
   Spacer,
 } from '@chakra-ui/react'
+
+
+import { ethers } from 'ethers';
+
+
 
 const InputForm = (props) => {
   const [elements, setElements] = useState(null);
@@ -53,6 +59,7 @@ const InputForm = (props) => {
 
     return defaultView[0]
   }
+
   const onSubmit = async (values) => {
     let callType;
 
@@ -64,6 +71,10 @@ const InputForm = (props) => {
     else {
       callType = 'write'
     }
+
+    // const dd = ethers.utils.parseEther("2")
+
+    // const values1 = { eventName: "", duration: dd, isUnrestricted: false, maxTickets: 7, skipIncubation: false }
 
     const transaction = await smartContractCall(props.contractIndex, callType, name, values)
     handleOutput(transaction, callType, values)

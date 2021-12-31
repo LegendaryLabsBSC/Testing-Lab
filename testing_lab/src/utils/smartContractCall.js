@@ -4,6 +4,8 @@ export default async function smartContractCall(
   contractIndex, callType, name, values
 ) {
 
+  console.log(values)
+
   const subContract = Object.keys(contractLab)[contractIndex]
   const args = Object.values(values)
 
@@ -11,10 +13,12 @@ export default async function smartContractCall(
 
     return await contractLab[subContract][callType][name](...args)
       .then((data) => {
+        console.log(data)
         return data
       })
       .catch((err) => {
+        console.log(err)
         return err
       })
-  } 
+  }
 }

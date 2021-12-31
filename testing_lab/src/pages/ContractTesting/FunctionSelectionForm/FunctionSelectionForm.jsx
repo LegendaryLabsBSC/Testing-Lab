@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Flex, Divider } from "@chakra-ui/react";
 import FormMenuHeader from "./components/FormMenuHeader";
 import ContractFunctions from "./components/ContractFunctions";
+
 import { smartContracts } from "../../../config/contractInterface";
 
 const FunctionSelectionForm = (props) => {

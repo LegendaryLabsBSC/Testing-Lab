@@ -25,12 +25,7 @@ const ContractFunctions = (props) => {
         overflowX="hidden"
         position="absolute"
       >
-        <Flex
-          m={1}
-          w="100%"
-          wrap="wrap"
-          justify="center"
-        >
+        <Flex wrap="wrap" justify="center">
           {props.contractData &&
             props.contractData.abi &&
             props.contractData.abi.map((contractCall, i) =>

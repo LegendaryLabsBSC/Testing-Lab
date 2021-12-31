@@ -19,8 +19,6 @@ const DocsViewerHeading = (props) => {
 
   const handleURL = () => {
 
-    console.log('good3')
-
     const baseURL = "https://docs.legendarylabs.net/docs/"
     const slug = props.contractData.sourceName.split('.')[0]
     const subSlug = `${props.title}`.toLowerCase()

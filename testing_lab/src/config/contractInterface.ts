@@ -7,7 +7,7 @@ import {
   LegendRejuvenation,
   LegendsMarketplace,
   LegendsMatchingBoard,
-} from "./contractABIs";
+} from "./contract-ABIs";
 
 import {
   legendsLaboratory,
@@ -16,7 +16,9 @@ import {
   legendRejuvenation,
   legendsMarketplace,
   legendsMatchingBoard,
-} from "./contractAddresses";
+} from "./contract-addresses";
+
+
 
 declare global {
   interface Window {
@@ -49,6 +51,8 @@ const smartContracts = [
 
 const provider: any = new ethers.providers.Web3Provider(window.ethereum);
 const signer: any = provider.getSigner();
+
+//todo: put alert back in and see if it works with deployed build
 
 //todo: make dynamic for easy reusability
 const lab: ContractInterface = {
